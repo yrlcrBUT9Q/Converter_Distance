@@ -51,6 +51,16 @@ public class Main {
             }
         }
     }
+
+
+
+
+
+
+
+
+
+
     public static void pleaseWrite() {
         System.out.println("Please write distance:");
     }
