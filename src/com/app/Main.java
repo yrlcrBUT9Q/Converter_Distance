@@ -43,6 +43,9 @@ public class Main {
                     }
                 }
                 case 3 -> {
+
+
+
                     flag = false;
                 }
                 default -> {
@@ -50,18 +53,3 @@ public class Main {
                 }
             }
         }
-    }
-
-
-
-
-
-
-
-
-
-
-    public static void pleaseWrite() {
-        System.out.println("Please write distance:");
-    }
-}
