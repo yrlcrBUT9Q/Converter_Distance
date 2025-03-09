@@ -25,8 +25,8 @@ public class Main {
 
             switch (operationNumber) {
                 case 1 -> {
-                    System.out.println("Please write distance:");
                     try {
+                        pleaseWrite();
                         int km = Integer.parseInt(scanner.next());
                         System.out.println(km + " km = " + Convertor.getConverterKmToMl(km) + " miles \n");
                     } catch (Exception e) {
@@ -34,7 +34,7 @@ public class Main {
                     }
                 }
                 case 2 -> {
-                    System.out.println("Please write distance:");
+                    pleaseWrite();
                     try {
                         int ml = Integer.parseInt(scanner.next());
                         System.out.println(ml + " ml = " + Convertor.getConverterMlToKm(ml) + " kilometres \n");
@@ -53,6 +53,3 @@ public class Main {
                 }
             }
         }
-        System.out.println("test");
-        }
-    }
