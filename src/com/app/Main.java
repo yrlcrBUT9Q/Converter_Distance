@@ -27,6 +27,7 @@ public class Main {
                 case 3 -> flag = false;
                 default -> System.out.println("No operation,Try again. \n");
 
+
                 }
             }
         }
