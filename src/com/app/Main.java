@@ -12,11 +12,12 @@ public class Main {
         int operationNumber = 0;
 
         while (flag) {
-            System.out.println("Program: Convertor Distance \n" +
-                    "please choose (write) 1,2 or 3 \n" +
-                    "1. conversion km to ml \n" +
-                    "2. conversion ml to km \n" +
-                    "3. exit");
+            System.out.println("""
+                    Program: Convertor Distance\s
+                    please choose (write) 1,2 or 3\s
+                    1. conversion km to ml\s
+                    2. conversion ml to km\s
+                    3. exit""");
             try {
                 operationNumber = Integer.parseInt(scanner.next()); //choose function 1,2,3
             } catch (Exception e) {
@@ -24,32 +25,11 @@ public class Main {
             }
 
             switch (operationNumber) {
-                case 1 -> {
-                    System.out.println("Please write distance:");
-                    try {
-                        int km = Integer.parseInt(scanner.next());
-                        System.out.println(km + " km = " + Convertor.getConverterKmToMl(km) + " miles \n");
-                    } catch (Exception e) {
-                        System.out.println("Invalid data");
-                    }
-                }
-                case 2 -> {
-                    System.out.println("Please write distance:");
-                    try {
-                        int ml = Integer.parseInt(scanner.next());
-                        System.out.println(ml + " ml = " + Convertor.getConverterMlToKm(ml) + " kilometres \n");
-                    } catch (Exception e) {
-                        System.out.println("Invalid data");
-                    }
-                }
-                case 3 -> {
-                    flag = false;
-                }
-                default -> {
-                    System.out.println("No operation,Try again. \n");
+                case 1 -> Convertor.bodyFunction(scanner, "km");
+                case 2 -> Convertor.bodyFunction(scanner, "ml");
+                case 3 -> flag = false;
+                default -> System.out.println("No operation,Try again. \n");
                 }
             }
         }
-        System.out.println("test");
-        }
-    }
+}
