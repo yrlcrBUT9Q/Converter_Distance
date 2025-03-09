@@ -18,18 +18,24 @@ public class Main {
                     1. conversion km to ml\s
                     2. conversion ml to km\s
                     3. exit""");
-            try {
-                operationNumber = Integer.parseInt(scanner.next()); //choose function 1,2,3
-            } catch (Exception e) {
-                System.out.println("Invalid data");
-            }
+
+        chooseFunction(operationNumber, scanner);
 
             switch (operationNumber) {
                 case 1 -> Convertor.bodyFunction(scanner, "km");
                 case 2 -> Convertor.bodyFunction(scanner, "ml");
                 case 3 -> flag = false;
                 default -> System.out.println("No operation,Try again. \n");
+
                 }
+            }
+        }
+
+        public static void chooseFunction(int operationNum, Scanner scanner) {
+            try {
+                operationNum = Integer.parseInt(scanner.next()); //choose function 1,2,3
+            } catch (Exception e) {
+                System.out.println("Invalid data");
             }
         }
 }
